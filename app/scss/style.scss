@@ -15,6 +15,32 @@
       width: 95vw;
     }
 }
+
+@media screen and (min-width: 400px) {
+    .section-center {
+      width: 95vw;
+    }
+
+    .box {
+        align-items: center;
+    }
+
+    h3 {
+        align-items: center;
+        padding-right: 50px;
+    }
+
+    .input {
+        align-items: center;
+        padding-right: 50px;
+    }
+
+    button {
+        align-items: center;
+        text-align: center;
+    }
+}
+
 main {
     min-height: 100vh;
     display: grid;
