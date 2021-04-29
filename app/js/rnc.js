@@ -38,13 +38,21 @@ var convertToRoman = function(num) {
   
 };
 
-
-convertToRoman(99);
-
 document.getElementById('convert').addEventListener('click', function() {
   this.style.background = "green"
   let number = document.getElementById('roman').value;
-  dispElm1.textContent = convertToRoman(number)
+  dispElm1.textContent = convertToRoman(number);
 
   convertToRoman(number);
+
+  document.getElementById('roman').defaultValue = "number here!";
 })
+
+function success() {
+  if(roman.value==="") { 
+             convert.disabled = true; 
+         } else { 
+             convert.disabled = false;
+         }
+}
+
