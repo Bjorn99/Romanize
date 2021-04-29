@@ -30,8 +30,6 @@ var convertToRoman = function(num) {
       num -= decimalValue[index];
     }
   }
-  document.getElementById('roman').value = 
-  console.log(romanized);
 
   return romanized;
 
