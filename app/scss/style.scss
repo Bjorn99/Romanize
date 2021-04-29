@@ -62,6 +62,8 @@ main {
 /***** BUTTON *****/
 
 button {
+    text-transform: uppercase;
+    font-weight: bolder;
     border: none;
     text-align: center;
     padding: 10px;
@@ -81,9 +83,16 @@ button {
 
 .h4 {
     align-items: center;
+    font-weight: bold;
     overflow: scroll;
     text-align: center;
     border: solid;
     padding-bottom: 10px;
     border-radius: 10px;
+}
+
+#display-result-1 {
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
 }
