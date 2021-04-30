@@ -209,6 +209,7 @@ button {
   overflow: scroll;
   text-align: center;
   border: solid;
+  margin-top: 5px;
   padding-bottom: 10px;
   border-radius: 10px;
 }
@@ -221,12 +222,20 @@ button {
 }
 
 #roman {
+  padding: 5px;
   font-size: medium;
   text-align: center;
   align-items: center;
 }
 
 /*****INPUT*****/
+input {
+  outline: none;
+  border-style: none;
+  border-radius: 10px;
+}
+
 .input {
+  border: none;
   margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */
