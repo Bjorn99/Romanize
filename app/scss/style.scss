@@ -16,7 +16,13 @@
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
+
+    .box {
+        align-items: center;
+        text-align: center;
+    }
+    
     .section-center {
       width: 95vw;
     }
@@ -38,6 +44,10 @@
     button {
         align-items: center;
         text-align: center;
+    }
+
+    .button {
+        padding-right: 50px;
     }
 }
 
@@ -100,7 +110,8 @@ button {
 
 .button {
     text-align: center;
-    padding: 10px;
+    padding-right: 50px;
+    padding-top: 10px;
 }
 
 

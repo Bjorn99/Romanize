@@ -54,3 +54,37 @@ function success() {
          }
 }
 
+function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "select",
+"contextmenu", "drop"].forEach(function(event) {
+  textbox.addEventListener(event, function() {
+    if(inputFilter(this.value)) {
+      this.oldValue = this.value;
+      this.oldSelectionStart = this.selectionStart;
+      this.oldSelectionEnd = this.selectionEnd;
+    } else if (this.hasOwnProperty("oldValue")) {
+      this.value = this.oldValue;
+      this.selectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+    } else {
+      this.value = "";
+    }
+  });
+});
+}
+
+// Install input filters.
+setInputFilter(document.getElementById("roman"), function(value) {
+  return /^-?\d*$/.test(value); });
+
+// press "Enter" key to trigger button
+
+var press = document.getElementById("roman");
+
+press.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("convert").click();
+  }
+
+});
