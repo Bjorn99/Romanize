@@ -1,7 +1,6 @@
-const roman = document.querySelector('#roman');
-const convert = document.querySelector('#convert');
-const dispElm1 = document.querySelector('#display-result-1');
-const dispElm2 = document.querySelector('#display-result-2')
+const roman = document.querySelector("#roman");
+const convert = document.querySelector("#convert");
+const dispElm1 = document.querySelector("#display-result-1");
 
 
 var convertToRoman = function(num) {
@@ -36,14 +35,14 @@ var convertToRoman = function(num) {
   
 };
 
-document.getElementById('convert').addEventListener('click', function() {
+document.getElementById("convert").addEventListener("click", function() {
   this.style.background = "green"
   let number = document.getElementById('roman').value;
   dispElm1.textContent = convertToRoman(number);
 
   convertToRoman(number);
 
-  document.getElementById('roman').defaultValue = "number here!";
+  document.getElementById("roman").defaultValue = "number here!";
 })
 
 function success() {

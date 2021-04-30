@@ -1,54 +1,21 @@
 @import "globals";
 
 /* section */
-.section {
-    padding: 5rem 0;
-}
 
-.section-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-}
+
 @media screen and (min-width: 992px) {
     .section-center {
       width: 95vw;
     }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 400px) {
 
-    .box {
-        align-items: center;
-        text-align: center;
-    }
-    
+
     .section-center {
       width: 95vw;
     }
-
-    .box {
-        align-items: center;
-    }
-
-    h3 {
-        align-items: center;
-        padding-right: 50px;
-    }
-
-    .input {
-        align-items: center;
-        padding-right: 50px;
-    }
-
-    button {
-        align-items: center;
-        text-align: center;
-    }
-
-    .button {
-        padding-right: 50px;
-    }
+    
 }
 
 main {
@@ -57,12 +24,6 @@ main {
     place-items: center;
 }
 /* Section */
-
-main {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-}
 .title {
     text-align: center;
     margin-bottom: 4rem;
@@ -89,10 +50,12 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     position: relative;
     background: #fff7ff;
-    padding: 20px 40px 40px;
+    padding: 20px 40px 40px 20px;
     text-align: center;
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
 }
 
 /***** BUTTON *****/
@@ -110,7 +73,6 @@ button {
 
 .button {
     text-align: center;
-    padding-right: 50px;
     padding-top: 10px;
 }
 
@@ -134,3 +96,12 @@ button {
     align-items: center;
     font-size: 25px;
 }
+
+#roman {
+    font-size: medium;
+    text-align: center;
+    align-items: center;
+}
+
+/*****INPUT*****/
+
