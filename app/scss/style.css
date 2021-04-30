@@ -174,7 +174,6 @@ main {
 }
 
 .container .box {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   position: relative;
   background: #fff7ff;
@@ -200,7 +199,7 @@ button {
 
 .button {
   text-align: center;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 /***** display-result *****/
@@ -227,4 +226,7 @@ button {
   align-items: center;
 }
 
-/*****INPUT*****//*# sourceMappingURL=style.css.map */
+/*****INPUT*****/
+.input {
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */
