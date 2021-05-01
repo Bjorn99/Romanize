@@ -1,8 +1,6 @@
 const roman = document.querySelector("#roman");
 const convert = document.querySelector("#convert");
 const dispElm1 = document.querySelector("#display-result-1");
-
-
 var convertToRoman = function(num) {
   var decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
   var romanNumeral = [

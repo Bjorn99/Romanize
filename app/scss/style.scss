@@ -22,7 +22,10 @@ main {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    justify-content: center;
 }
+
+
 /* Section */
 .title {
     text-align: center;
@@ -110,7 +113,7 @@ button {
 /*****INPUT*****/
 input {
     outline: none;
-    border-style: none;
+    border-style: solid;
     border-radius: 10px;
 }
 
