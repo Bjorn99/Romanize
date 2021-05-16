@@ -1,9 +1,6 @@
-const roman = document.querySelector('#roman');
-const convert = document.querySelector('#convert');
-const dispElm1 = document.querySelector('#display-result-1');
-const dispElm2 = document.querySelector('#display-result-2')
-
-
+const roman = document.querySelector("#roman");
+const convert = document.querySelector("#convert");
+const dispElm1 = document.querySelector("#display-result-1");
 var convertToRoman = function(num) {
   var decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
   var romanNumeral = [
@@ -30,21 +27,61 @@ var convertToRoman = function(num) {
       num -= decimalValue[index];
     }
   }
-  document.getElementById('roman').value = 
-  console.log(romanized);
 
   return romanized;
 
   
 };
 
-
-convertToRoman(99);
-
-document.getElementById('convert').addEventListener('click', function() {
+document.getElementById("convert").addEventListener("click", function() {
   this.style.background = "green"
   let number = document.getElementById('roman').value;
-  dispElm1.textContent = convertToRoman(number)
+  dispElm1.textContent = convertToRoman(number);
 
   convertToRoman(number);
+
+  document.getElementById("roman").defaultValue = "number here!";
 })
+
+function success() {
+  if(roman.value==="") { 
+             convert.disabled = true; 
+         } else { 
+             convert.disabled = false;
+         }
+}
+
+function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "select",
+"contextmenu", "drop"].forEach(function(event) {
+  textbox.addEventListener(event, function() {
+    if(inputFilter(this.value)) {
+      this.oldValue = this.value;
+      this.oldSelectionStart = this.selectionStart;
+      this.oldSelectionEnd = this.selectionEnd;
+    } else if (this.hasOwnProperty("oldValue")) {
+      this.value = this.oldValue;
+      this.selectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+    } else {
+      this.value = "";
+    }
+  });
+});
+}
+
+// Install input filters.
+setInputFilter(document.getElementById("roman"), function(value) {
+  return /^-?\d*$/.test(value); });
+
+// press "Enter" key to trigger button
+
+var press = document.getElementById("roman");
+
+press.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("convert").click();
+  }
+
+});

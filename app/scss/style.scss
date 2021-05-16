@@ -1,32 +1,32 @@
 @import "globals";
 
 /* section */
-.section {
-    padding: 5rem 0;
-}
 
-.section-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-}
+
 @media screen and (min-width: 992px) {
     .section-center {
       width: 95vw;
     }
 }
-main {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
+
+@media screen and (min-width: 400px) {
+
+
+    .section-center {
+      width: 95vw;
+    }
+    
 }
-/* Section */
 
 main {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    justify-content: center;
 }
+
+
+/* Section */
 .title {
     text-align: center;
     margin-bottom: 4rem;
@@ -38,6 +38,7 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+
 .container {
     width: 80vw;
     height: auto;
@@ -49,19 +50,22 @@ main {
 }
 
 .container .box {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     position: relative;
     background: #fff7ff;
-    padding: 20px 40px 40px;
+    padding: 20px 40px 40px 20px;
     text-align: center;
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
 }
 
 /***** BUTTON *****/
 
 button {
+    text-transform: uppercase;
+    font-weight: bolder;
     border: none;
     text-align: center;
     padding: 10px;
@@ -72,7 +76,7 @@ button {
 
 .button {
     text-align: center;
-    padding: 10px;
+    margin-top: 10px;
 }
 
 
@@ -81,9 +85,40 @@ button {
 
 .h4 {
     align-items: center;
+    font-weight: bold;
     overflow: scroll;
     text-align: center;
     border: solid;
+    margin-top: 5px;
     padding-bottom: 10px;
     border-radius: 10px;
+}
+
+
+
+#display-result-1 {
+    padding-top: 5%;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+#roman {
+    padding: 5px;
+    font-size: medium;
+    text-align: center;
+    align-items: center;
+}
+
+/*****INPUT*****/
+input {
+    outline: none;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.input {
+    border: none;
+    margin-top: 20px;
+
 }
